@@ -31,7 +31,7 @@ const useFetchData = () => {
                 `https://api.jsonbin.io/b/5ea2fa3e98b3d5375233ca89`
               );
               const dataBank = await response.json();
-              setData(dataBank)
+              setData({dataBank})
               await dbRef.set({ dataBank });
               await AsyncStorage.setItem(STORAGE_FIRSTIME, true);
             }
